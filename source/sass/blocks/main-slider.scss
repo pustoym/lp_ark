@@ -1,0 +1,23 @@
+.main-slider {
+  width: 100%;
+  height: 450px;
+
+  @include viewport--xs {
+    height: 300px;
+  }
+}
+
+.swiper-slide img {
+  @include viewport--lg {
+    margin: 0 auto;
+  }
+
+  @include viewport--sm {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e27e36;
+}
