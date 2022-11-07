@@ -4239,7 +4239,8 @@ input:matches([type=email],[type=number],[type=password],[type=search],[type=tel
   }
 
   .call-to-action__inner--grid--form-side .call-to-action__title {
-      font-size: 24px
+      font-size: 24px;
+      text-align: center;
   }
 
   .call-to-action__dsc {
@@ -4394,7 +4395,7 @@ input:matches([type=email],[type=number],[type=password],[type=search],[type=tel
   }
 
   .questions__title {
-      margin-bottom: 45px
+      margin-bottom: 25px
   }
 
   .services {
