@@ -48,7 +48,7 @@ const setCustomPhoneInputsEvent = () => {
   }
 };
 
-const initFormValidate = () => {
+export const initFormValidate = () => {
   if (formWrappers.length) {
     setCustomPhoneInputsEvent();
     formWrappers.forEach((wrapper) => {
@@ -63,5 +63,3 @@ const initFormValidate = () => {
     });
   }
 };
-
-export {initFormValidate};
