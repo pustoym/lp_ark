@@ -60,16 +60,9 @@
   <noscript>
     У вас отключен JavaScript. Это пугает.
   </noscript>
-  <div style="display: none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <symbol id="Ellipse" viewBox="0 0 469 318">
-        <path d="M462.564 24.8515C469.152 36.0142 469.292 50.4205 463.66 67.0679C458.029 83.7114 446.668 102.465 430.477 122.164C398.1 161.554 346.551 204.546 283.494 241.765C220.437 278.985 157.887 303.339 107.755 312.65C82.6854 317.306 60.7764 318.19 43.4844 315.076C26.1883 311.962 13.6432 304.878 7.05437 293.715C0.465566 282.552 0.326233 268.146 5.958 251.499C11.5885 234.855 22.9495 216.101 39.1409 196.403C71.5182 157.013 123.067 114.021 186.124 76.8014C249.181 39.5821 311.731 15.2277 361.862 5.91691C386.932 1.26069 408.841 0.377142 426.134 3.49068C443.43 6.60492 455.975 13.6887 462.564 24.8515Z"
-              stroke="#E27F38" stroke-width="2" />
-      </symbol>
-      <symbol id="icon-close" viewBox="0 0 20 20">
-        <path
-              d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
-      </symbol>
-    </svg></div>
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
   <div class="page__inner">
     <div class="page__content">
       <header class="page-header" data-sal="slide-down" data-sal-duration="1300">
@@ -117,33 +110,35 @@
             Широкоформатная печать
             <span>для бизнеса</span>
           </h1>
-          <p class="intro__dsc" data-sal="slide-up" data-sal-delay="500" data-sal-duration="700">
+          <p class="intro__dsc" data-sal="slide-up" data-sal-delay="400" data-sal-duration="700">
             От&nbsp;предприятия авиационной промышленности России
           </p>
           <button class="intro__btn btn btn--w-100 btn--is-icon" type="button" data-open-modal="callback"
-                  data-sal="slide-up" data-sal-delay="1000" data-sal-duration="700">
+                  data-sal="slide-up" data-sal-delay="600" data-sal-duration="700">
             Оставить заявку<span class="btn__icon"><svg width="38" height="16">
                 <use xlink:href="img/sprite.svg#arrow"></use>
               </svg></span>
           </button>
         </div>
         <div class="intro__img-wrap" data-sal="slide-left"
-             data-sal-delay="400" data-sal-duration="1300">
+             data-sal-delay="300" data-sal-duration="700">
           @@include("source/html/main-slider.html")
           <!-- <picture>
             <img src="img/intro.jpg" class="intro__img" alt="Изображения процесса печати принтера" width="705" />
           </picture> -->
         </div>
       </section>
-      <section class="services" id="services" data-sal="slide-up" data-sal-duration="300">
+      <section class="services" id="services">
         <div class="services__inner">
           <h2 class="services__title">Услуги печати</h2>
           <div class="accordion accordion--over-size accordion--text-lg" data-accordion="parent"
                data-single="data-single">
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #ef476f"></span><span
-                      class="accordion__buton-text">Широкоформатная интерьерная печать</span>
+                <svg width="50" height="50">
+                  <use xlink:href="#printer"></use>
+                </svg>
+                Широкоформатная интерьерная печать
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
@@ -162,10 +157,12 @@
                 </div>
               </div>
             </div>
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #ffd166"></span><span
-                      class="accordion__buton-text">Изготовление технических наклеек</span>
+                <svg width="50" height="50">
+                  <use xlink:href="#sticker"></use>
+                </svg>
+                Изготовление технических наклеек
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
@@ -195,10 +192,12 @@
                 </div>
               </div>
             </div>
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #06d6a0"></span><span
-                      class="accordion__buton-text">Изготовление объемных наклеек</span>
+                <svg width="50" height="50">
+                  <use xlink:href="#cube"></use>
+                </svg>
+                Изготовление объемных наклеек
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
@@ -218,10 +217,12 @@
                 </div>
               </div>
             </div>
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #118ab2"></span><span
-                      class="accordion__buton-text">Изготовление этикеток/наклеек со шрифтом Брайля</span>
+                <svg width="50" height="50">
+                  <use xlink:href="#braille"></use>
+                </svg>
+                Изготовление этикеток/наклеек со шрифтом Брайля
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
@@ -233,10 +234,12 @@
                 </div>
               </div>
             </div>
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #94b92a"></span><span
-                      class="accordion__buton-text">Изготовление информационных табличек, стендов и указателей.</span>
+                <svg width="50" height="50" >
+                  <use xlink:href="#stand"></use>
+                </svg>
+                Изготовление информационных табличек, стендов и указателей.
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
@@ -255,10 +258,12 @@
               </div>
             </div>
 
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #ec9733"></span><span
-                      class="accordion__buton-text">Печать белым цветом любого тиража</span>
+                <svg width="50" height="50" >
+                  <use xlink:href="#bottle"></use>
+                </svg>
+                Печать белым цветом любого тиража
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
@@ -279,10 +284,12 @@
               </div>
             </div>
 
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #ec9733"></span><span
-                      class="accordion__buton-text">Печать на обоях и холсте</span>
+                <svg width="50" height="50">
+                  <use xlink:href="#rulon-sticker"></use>
+                </svg>
+                Печать на обоях и холсте
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
@@ -307,10 +314,12 @@
               </div>
             </div>
 
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #ec9733"></span><span
-                      class="accordion__buton-text">Печать на металлизированных и специальных пленках</span>
+                <svg width="50" height="50">
+                  <use xlink:href="#metal"></use>
+                </svg>
+                Печать на металлизированных и специальных пленках
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
@@ -324,10 +333,12 @@
               </div>
             </div>
 
-            <div class="accordion__element" data-accordion="element">
+            <div class="accordion__element" data-accordion="element" data-sal="slide-up" data-sal-duration="300">
               <button class="accordion__button" type="button" data-accordion="button">
-                <span class="css-icon-arrow" style="background-color: #ec9733"></span><span
-                      class="accordion__buton-text">Контурная и плоттерная резка</span>
+                <svg width="50" height="50">
+                  <use xlink:href="#plotter"></use>
+                </svg>
+                Контурная и плоттерная резка
               </button>
               <div class="accordion__content" data-accordion="content">
                 <div class="accordion__wrapper">
