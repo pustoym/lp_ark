@@ -1,12 +1,12 @@
 // Vendor
-//---------------------------------
+// ---------------------------------
 
 @import "vendor/style.css";
 @import "../../node_modules/swiper/swiper-bundle.min";
 @import "sal.js/dist/sal.css";
 
 // Global
-//---------------------------------
+// ---------------------------------
 
 @import "variables";
 @import "mixins";
@@ -17,7 +17,7 @@
 // @import "global/container";
 
 // Blocks
-//---------------------------------
+// ---------------------------------
 
 @import "blocks/main-slider";
 @import "blocks/accordion";

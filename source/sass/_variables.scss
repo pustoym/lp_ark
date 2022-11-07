@@ -35,7 +35,7 @@ $border-color: $gray-lighten;
 $black-to-right: linear-gradient(90deg, rgb(0 0 0 / 75%) 0%, rgb(0 0 0 / 0%) 75%);
 
 // Базовая типографика
-//---------------------------------
+// ---------------------------------
 
 $font-size: 16px;
 $font-size-h1: 40px;
@@ -56,13 +56,13 @@ $font-family--monospace: sfmono-regular, menlo, monaco, consolas,
 // Georgia, Times New Roman, Times, serif
 
 // Animation
-//---------------------------------
+// ---------------------------------
 
 $default-transition-settings: 0.3s ease;
 $modal-transition-settings: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 // Viewports
-//---------------------------------
+// ---------------------------------
 
 $viewport--sm: 480px;
 $viewport--md: 768px;
@@ -78,13 +78,13 @@ $viewport--xxl: 1920px;
 // $screen-xxl:                  1800px;
 
 // Модульная сетка
-//---------------------------------
+// ---------------------------------
 
 $grid-columns: 12;
 $grid-gutter-width: 30px;
 
 // Разное
-//---------------------------------
+// ---------------------------------
 
 $field-padding-vertical: 5px;
 $field-padding-horizontal: 12px;
@@ -98,7 +98,7 @@ $toggler-part-height: 2px;
 $z-index-modal: 100;
 
 // Retina
-//---------------------------------
+// ---------------------------------
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
