@@ -5,7 +5,7 @@ import styles from './gulp/compileStyles.mjs';
 import {copy, copyImages, copySvg} from './gulp/copyAssets.mjs';
 import js from './gulp/compileScripts.mjs';
 import {svgo, sprite, createWebp, optimizeImages} from './gulp/optimizeImages.mjs';
-import {html, validateHtml} from './gulp/compileHtml.mjs';
+import html from './gulp/compileHtml.mjs';
 
 const server = browserSync.create();
 const streamStyles = () => styles().pipe(server.stream());
@@ -29,7 +29,7 @@ const syncServer = () => {
     // tunnel: 'ark-test-03-11',
   });
 
-  gulp.watch('source/**/*.html', gulp.series(html, validateHtml, refresh));
+  gulp.watch('source/**/*.html', gulp.series(html, refresh));
   gulp.watch('source/sass/**/*.{scss,sass,css}', streamStyles);
   gulp.watch('source/js/**/*.{js,json}', gulp.series(js, refresh));
   gulp.watch('source/img/**/*.svg', gulp.series(svgo, copySvg, sprite, html, refresh));
@@ -43,7 +43,7 @@ const syncServer = () => {
 };
 
 
-const build = gulp.series(clean, svgo, copy, styles, sprite, js, html, validateHtml);
+const build = gulp.series(clean, svgo, copy, styles, sprite, js, html);
 const start = gulp.series(build, syncServer);
 
 export {optimizeImages as imagemin, createWebp as webp, build, start};
